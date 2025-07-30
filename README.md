@@ -6,13 +6,13 @@ A smart, dynamic to-do application that helps you manage your tasks based on you
 
 ## 🌟 Overview
 
-This is a feature-rich to-do app designed as part of a developer bootcamp. Users can:
+This is a feature-rich to-do app users can:
 - Create, edit, complete, and delete tasks
 - Set their mood and receive personalized suggestions
 - Get weather-based task recommendations
 - Log in to access their own task list
 
-This app combines frontend design, interactive UI logic, and API integration — making it a great full-stack learning project.
+This app combines frontend design, interactive UI logic, and API integration.
 
 ---
 
