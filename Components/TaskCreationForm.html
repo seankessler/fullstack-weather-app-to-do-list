@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create Task</title>
+    <link rel="stylesheet" href="../Styles/TaskCreationForm.css" />
+  </head>
+  <body>
+    <main class="task-form" role="main">
+      <h1>What do you get to do?</h1>
+      <p>Please enter the task details below.</p>
+
+      <form class="form" method="post" action="#" autocomplete="on">
+        <div class="field">
+          <label for="title">Task Title</label>
+          <input id="title" name="title" type="text" placeholder="e.g., Buy groceries" required />
+        </div>
+
+        <div class="field">
+          <label for="description">Task Description</label>
+          <textarea id="description" name="description" rows="4" placeholder="Add details about the task" required></textarea>
+        </div>
+
+        <div class="field">
+          <label for="dueDate">Due Date</label>
+          <input id="dueDate" name="dueDate" type="date" required />
+        </div>
+
+        <button type="submit" class="btn">Add Task</button>
+      </form>
+    </main>
+  </body>
+  
+</html>

@@ -1,0 +1,123 @@
+/* Home page styles — palette: #177e89, #084c61, #db3a34, #ffc857, #323031 */
+
+:root {
+  --bg: #323031;
+  --surface: #3a383b;
+  --text: #f4f5f6;
+  --muted: #c9cbce;
+  --primary: #177e89;
+  --primary-700: #084c61;
+  --accent: #ffc857;
+  --danger: #db3a34;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background:
+    radial-gradient(900px 500px at 5% 10%, rgba(23,126,137,0.15), transparent 60%),
+    radial-gradient(800px 450px at 20% 85%, rgba(8,76,97,0.12), transparent 60%),
+    radial-gradient(900px 500px at 95% 90%, rgba(255,200,87,0.12), transparent 60%),
+    var(--bg);
+  line-height: 1.55;
+}
+
+/* Page sections (top-level divs) */
+body > div {
+  max-width: 960px;
+  margin: 0 auto 16px auto;
+  padding: 18px 20px;
+  background: linear-gradient(180deg, rgba(58,56,59,0.9), rgba(58,56,59,0.8));
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px var(--shadow);
+}
+
+/* Subtle colored borders per section to use more palette */
+body > div:first-of-type { border-color: rgba(23,126,137,0.35); }
+body > div:nth-of-type(2) { border-color: rgba(255,200,87,0.35); }
+body > div:nth-of-type(3) { border-color: rgba(8,76,97,0.35); }
+body > div:nth-of-type(4) { border-color: rgba(219,58,52,0.28); }
+
+h1, h2, h3, h4 { margin: 0 0 10px; line-height: 1.25; }
+h3 { font-size: 1.25rem; }
+
+p { margin: 0 0 10px; color: var(--muted); }
+
+/* List + tasks */
+ul { margin: 8px 0 0 20px; padding: 0; }
+li { margin: 6px 0; }
+li::marker { color: var(--accent); }
+
+/* Emphasize recommended task items */
+body > div:nth-of-type(2) ul li { border-left: 4px solid var(--primary); padding-left: 10px; }
+/* Uniform border for the all-tasks list */
+body > div:nth-of-type(4) ul li { border-left: 4px solid var(--primary); padding-left: 10px; }
+
+/* Buttons */
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, var(--primary), var(--primary-700));
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .06s ease, filter .15s ease, box-shadow .15s ease;
+  box-shadow: 0 6px 14px rgba(8, 76, 97, 0.35);
+}
+
+button:hover { filter: brightness(1.05); }
+button:active { transform: translateY(1px); }
+button:focus-visible { outline: 3px solid rgba(255,200,87,0.55); outline-offset: 2px; }
+
+/* Secondary emphasis (e.g., warning/danger actions if needed) */
+.btn-accent { background: var(--accent); color: #1f1e20; }
+.btn-danger { background: var(--danger); }
+
+/* Spacing for consecutive buttons */
+button + button { margin-left: 8px; }
+
+/* Apply accent/danger styles contextually without changing HTML */
+/* Mood button on first section as accent */
+body > div:first-of-type button { background: var(--accent); color: #1f1e20; box-shadow: 0 6px 14px rgba(255,200,87,0.35); }
+/* "Remove task" in third section as danger */
+body > div:nth-of-type(3) button:last-of-type { background: var(--danger); box-shadow: 0 6px 14px rgba(219,58,52,0.35); }
+/* "Complete?" buttons in second section as primary-700 for variety */
+body > div:nth-of-type(2) button { background: linear-gradient(135deg, var(--primary-700), #0b6280); }
+
+/* Inline name highlight */
+span { color: var(--accent); font-weight: 600; }
+
+/* Make nested ULs inside paragraphs behave nicely */
+p > ul { margin-top: 6px; }
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  body { padding: 18px; }
+  body > div { padding: 16px; }
+}
+
+@media (max-width: 600px) {
+  h3 { font-size: 1.1rem; }
+  body > div { padding: 14px; border-radius: 12px; }
+  button { width: 100%; margin-top: 8px; }
+  button + button { margin-left: 0; }
+  ul { margin-left: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

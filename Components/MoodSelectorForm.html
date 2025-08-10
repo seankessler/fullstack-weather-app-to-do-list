@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mood Selector</title>
+    <link rel="stylesheet" href="../Styles/MoodSelectorForm.css" />
+  </head>
+  <body>
+    <main>
+      <h1>How are you feeling?</h1>
+      <p>Please select your current mood.</p>
+
+      <form class="form" method="post" action="#">
+        <div class="field">
+          <label for="mood">Mood</label>
+          <select id="mood" name="mood" required>
+            <option value="" selected disabled>Select a mood</option>
+            <option value="happy">Happy</option>
+            <option value="neutral">Neutral</option>
+            <option value="sad">Sad</option>
+          </select>
+        </div>
+
+        <button type="submit">Set Mood</button>
+      </form>
+    </main>
+  </body>
+  
+</html>
