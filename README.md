@@ -17,25 +17,6 @@ Responsive Design for desktop, tablet, and mobile
 Consistent Visual Theme with clear spacing, typography, and color palette
 
 
-📂 Folder Structure
-module-2/mood-based-todo-app/
-├── Styles/
-│   ├── index.css
-│   ├── login.css
-│   ├── tasksComponent.css
-│   ├── suggestedTaskComponent.css
-│   ├── taskCreationForm.css
-│   ├── moodSelecter.css
-│   ├── loginForm.css
-├── Assets/
-│   ├── // images, icons, and other static assets
-├── Components/
-│   ├── taskComponent.html
-│   ├── suggestedTaskComponent.html
-│   ├── taskCreationForm.html
-│   ├── moodSelecterForm.html
-│   ├── loginForm.html
-├── index.html
 
 🛠️ Technologies Used
 HTML5 – semantic structure for maintainability
