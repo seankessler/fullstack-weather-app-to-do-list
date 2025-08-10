@@ -4,8 +4,8 @@ A sleek, responsive, and user-friendly to-do list application designed to help u
 
 Home Page Layout with sections for:
 
-Task list (using the Task Component in later modules)
-Buttons to open Task Creation Form and Mood Selector
+Task list (using the Task Component in later modules)  
+Buttons to open Task Creation Form and Mood Selector  
 Suggested Tasks section for mood-based recommendations (integration coming later)
 Reusable Static Components:
 Login Form – clean and mobile-friendly
